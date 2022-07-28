@@ -103,6 +103,9 @@
       $name_exo_score
     !endif
   </span>
+  <script type="text/javascript">
+    window.parent.postMessage({ action: 'wims::result', score: $module_score }, '*');
+  </script>
   !ifval $module_score>9.8
     <span class="oef_congratulations">$wims_name_Congratulations</span>
   !endif
